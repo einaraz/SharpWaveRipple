@@ -13,7 +13,7 @@ outlier_threshold = 100000                               # Value above which mea
                                                          #   that contain at least one value above outlier_threshold are deleted
 filter_outliers_from_signal = False                      # if True, remove windows where the maximum value is above outlier_threshold, most
                                                          #   likely due to noisy data
-plot_groups = False                                      # if True, it will open a figure for each file showing the original signal (z-scored) and all events
+plot_groups = True                                      # if True, it will open a figure for each file showing the original signal (z-scored) and all events
                                                          #   identified based on criteria - useful to first inspect the data and to help define the best parameters
 # Obtain a list of all recordings ----------------------------   
 all_mats = sorted(glob("InputData/*.mat"))     

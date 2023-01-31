@@ -21,6 +21,7 @@ The script SharpWaveRipple requires only a standard computer with enough RAM to 
 ## OS Requirements
 SharpWaveRipple is supported for Linux, macOS, and Windows. It was tested on the following systems:
 - macOS: Monterey Version 12.0
+- macOS: Catalina Version 10.15.5
 
 ## Python dependencies
 SharpWaveRipple was written and tested with Python 3.9.7. It requires the following packages 

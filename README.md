@@ -45,7 +45,7 @@ This example should run in a few seconds on most machines. There will be two out
 
 # Instructions for use
 
-To run the script on your own data, first replace your own MATLAB files in InputData or create a new folder. All parameters needed for your analyses, including where your filed are located, should be editted in the file inputparameters.py. The main parameters are the following:
+To run the script using your own data, replace the sample data in the InputData folder with your own MATLAB files. Alternatively, the user can create a new folder and update the path within the script. All parameters needed for your analyses, including where your files are located, should be edited in the file inputparameters.py. The main parameters are the following:
 
 | Variable | Description |
 | --- | ----------- |
@@ -55,7 +55,7 @@ To run the script on your own data, first replace your own MATLAB files in Input
 | window_of_activity| [in mili seconds] duration of window of consecutive values above threshold|
 | threshold | [-] cutoff value above which windows of activity will be isolated |
 
-Additional options are available and described in inputparameters.py. In addition, to help select the best parameters, the option plot_groups can be used. Enabling this feature opens a window showing the input time series. All detected events will be shown as demonstrated in the graphs belowbelow. Note that each MATLAB file will open its own window, and that windows will have to be closed manually.
+Additional options are available and described in inputparameters.py. To help select the best parameters for your dataset, the option plot_groups can be used. Enabling this feature will open a window showing SWR detection across the user's selected time series. The graphs below demonstrate how detected events are displayed when plot_groups is enabled. Note that each MATLAB file will open its own window, and that windows will have to be closed manually. While optimizing parameters, it may be best to use a small selection of recordings.
 
 ![SWR](Fig1.png)
 ![SWR](Fig2.png)

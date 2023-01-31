@@ -45,4 +45,17 @@ This example should run in a few seconds in most machines. There will be two out
 
 # Instructions for use
 
-To run the script on your own data, first replace your own matlab files in InputData or create a new folder. The main parameters of your analyses need to be modified in the script.
+To run the script on your own data, first replace your own matlab files in InputData or create a new folder. All parameters needed for your analyses, including where your filed are located, should be editted in the file inputparameters.py. The main parameters are the following
+
+| Variable | Description |
+| --- | ----------- |
+| begin_time| [in sec] where to start analyzing time series |
+| end_time | [in sec] where to stop analyzing time series |
+| frequency | [in Hz] frequency of data acquisition (points per second) |
+| window_of_activity| [in mili seconds] duration of window of consecutive values above threshold|
+| threshold | [-] cutoff value above which windows of activity will be isolated |
+
+Additional options are available and described in inputparameters.py. In addition, to help select the best parameters, the option plot_groups can be used. It will open a window showing the input time series and all detected events will shown as below. Note that every window will have to be closed manually.
+
+
+

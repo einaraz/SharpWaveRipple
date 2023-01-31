@@ -35,7 +35,7 @@ SharpWaveRipple does not need to be installed on the user's machine.
 # Demo 
 
 Sample data can be found in the folder InputData. The folder contains four MATLAB files containing recordings from mouse hippocampus. 
-To run sample data, the user must first download the entire package. Open and run the main script SWRdetect.py in any python interface, such as Spyder, or call the application in the command lines as
+To analyze sample data, the user must first download the entire package. Next, the user must open and run the main script SWRdetect.py in any python interface, such as Spyder, or call the application in the command lines as
 ```
 python3 SWRdetect.py
 ```

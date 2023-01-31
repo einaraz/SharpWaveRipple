@@ -19,7 +19,8 @@ Upon completion, detected events are saved to two excel sheets titled 'SWRsummar
 The script SharpWaveRipple requires only a standard computer with enough RAM to support the operations defined by a user and enough hard-drive space to store the input datasets.
 
 ## OS Requirements
-SharpWaveRipple is supported for Linux, macOS, and Windows.
+SharpWaveRipple is supported for Linux, macOS, and Windows. It was tested on the following systems:
+- macOS: Monterey Version 12.0
 
 ## Python dependencies
 SharpWaveRipple was written and tested with Python 3.9.7. It requires the following packages 
@@ -57,5 +58,7 @@ To run the script on your own data, first replace your own matlab files in Input
 
 Additional options are available and described in inputparameters.py. In addition, to help select the best parameters, the option plot_groups can be used. It will open a window showing the input time series and all detected events will shown as below. Note that every window will have to be closed manually.
 
+![SWR](Fig1.png)
+![SWR](Fig2.png)
 
 

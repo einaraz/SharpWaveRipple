@@ -8,6 +8,11 @@ How to cite:
 # Overview
 The provided script is used to detect sharp wave-ripple (SWR) events from in vivo electrophysiological recordings. The script enables detection of SWR time of initiation and culmination, total event number, peak amplitude, and integral. The script requires a single MATLAB file for each recording channel. Local field potential (LFP) recordings must be prefiltered depending on desired SWR frequency (i.e., 140-250 Hz). 
 
+The structure of the script is the following:
+ - inputparameters.py: contains all parameters necessary to run the analyses. It should be edited by the user.
+ - SWRdetect.py: contains the main routine performing all data processing, event detection, and data output. It does not need modification.
+ - inputData: a folder containing all MATLAB files (extension .mat) that will be processed. A different folder path can be specified in 'inputparameters.py'.
+ 
 Users must supply the appropriate parameters of their recordings and desired experimental design to ensure successful SWR detection. Parameters include sampling frequency of the LFP recording (frequency), the desired SWR minimum duration (window_of_activity), the desired z-score cutoff for a detected event (threshold), and an optional z-score outlier threshold (outlier_threshold). The script enables users to select specific timepoints of their recordings to focus their analyses (begin_time; end_time). 
 
 Upon completion, detected events are saved to two excel sheets titled 'SWRsummary.xlsx' and 'DetailedSWRsummary.xlsx'. 'SWRsummary.xlsx' contains averaged values for each recording (SWR number, duration, etc). 'DetailedSWRsummary.xlsx' provides information regarding each detected SWR event.
@@ -30,7 +35,7 @@ SharpWaveRipple was written and tested with Python 3.9.7. It requires the follow
 - Matplotlib 3.4.3
 ```
 # Installation guide
-SharpWaveRipple does not need to be installed on the user's machine.
+SharpWaveRipple does not need installation on the user's machine. It only requires Python and the above specified packages. See below the details of how to run the analyses using the demo data or your own data.
 
 # Demo 
 

@@ -1,6 +1,8 @@
 # SharpWaveRipple
 
-How to cite:
+Cite as:
+
+Blake Laham & Einara Zahn. (2023). einaraz/SharpWaveRipple: V0.0.2 (v0.0.2). Zenodo. https://doi.org/10.5281/zenodo.7592606
 
 [![DOI](https://zenodo.org/badge/459619241.svg)](https://zenodo.org/badge/latestdoi/459619241)
 

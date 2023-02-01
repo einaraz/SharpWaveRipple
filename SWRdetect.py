@@ -135,24 +135,6 @@ def DetectIntervalsSWR(data, threshold, number_points, combine_groups, time_cons
 
 print("Total number of mat files: %d"%len(all_mats))
 
-# Organize files in specific order----------------------------
-# Use the code below to organize the order in which files
-#  will be processed (useful to group results following a pattern)
-
-#drug        = ['Veh', 'CNO']
-#conditionst = ['ytv', 'ytb', 'ztv', 'ztb' ]
-#all_mats    = []
-#for dr in drug:
-#    for cond in conditionst:
-#        aux_cond = [ ci for ci in all_mats0 if dr in ci and cond in ci]
-#        all_mats = all_mats + aux_cond
-
-#conditionsu = ['yuv',  'yub',  'zuv', 'zub']
-#for dr in drug:
-#    for cond in conditionsu:
-#        aux_cond = [ ci for ci in all_mats0 if dr in ci and cond in ci]
-#        all_mats = all_mats + aux_cond
-
 # Create an excel files to write outputs
 stats_all_excel = pd.ExcelWriter('DetailedSWRsummary.xlsx')
 SWR_averages    = {'number_SWR': [], 'average_integral': [], 'average_peak': [], 'average_duration': []}
@@ -166,8 +148,8 @@ for tt,swr_file in enumerate(all_mats):
     print("Reading file %s, %d/%d"%(swr_file, tt+1, len(all_mats) ))
     exp_name = swr_file.split("/")[-1].replace(".mat","")
     data     = loadmat(swr_file)['DATA'].T
-    df       = pd.DataFrame({'signal': data[3]}, index=data[0])       # Create a pandas dataframe
-    df       = df[(df.index>=begin_time)&(df.index<=end_time)]        # Select only time interval of interest
+    df       = pd.DataFrame({'signal': data[ncol_sinal ]}, index=data[ncol_time])       # Create a pandas dataframe
+    df       = df[(df.index>=begin_time)&(df.index<=end_time)]                          # Select only time interval of interest
     del data
 
     # Find intervals ----------------------------------

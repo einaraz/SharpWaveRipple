@@ -1,6 +1,8 @@
 # SharpWaveRipple
 
-How to cite:
+Cite as:
+
+Blake Laham & Einara Zahn. (2023). einaraz/SharpWaveRipple: V0.0.2 (v0.0.2). Zenodo. https://doi.org/10.5281/zenodo.7592606
 
 [![DOI](https://zenodo.org/badge/459619241.svg)](https://zenodo.org/badge/latestdoi/459619241)
 
@@ -35,12 +37,12 @@ SharpWaveRipple was written and tested with Python 3.9.7. It requires the follow
 - Matplotlib 3.4.3
 ```
 # Installation guide
-SharpWaveRipple does not need installation on the user's machine. It only requires Python and the above specified packages. See below the details of how to run the analyses using the demo data or your own data.
+SharpWaveRipple does not require installation on the user's machine. It only requires Python and the specified packages. See below for details regarding how to run the analyses using the demo data or your own data.
 
 # Demo 
 
 Sample data can be found in the folder InputData. The folder contains four MATLAB files containing recordings from mouse hippocampus. 
-To analyze sample data, the user must first download the entire package. Next, the user must open and run the main script SWRdetect.py in any python interface, such as Spyder, or call the application in the command lines as
+To analyze sample data, the user must first download the SharpWaveRipple folder. Next, the user must open and run the main script SWRdetect.py using any python interface, such as Spyder, or call the application in the command lines as
 ```
 python3 SWRdetect.py
 ```
@@ -60,7 +62,7 @@ To run the script using your own data, replace the sample data in the InputData 
 | window_of_activity| [in mili seconds] duration of window of consecutive values above threshold|
 | threshold | [-] cutoff value above which windows of activity will be isolated |
 | ncol_time | column where the timestamp is located in the matlab file (notice that column number starts at zero in Python)|
-| ncol_sinal | column where filtered signal is located in the matlab file (notice that column number starts at zero in Python)|
+| ncol_signal | column where filtered signal is located in the matlab file (notice that column number starts at zero in Python)|
  
 Additional options are available and described in inputparameters.py. To help select the best parameters for your dataset, the option plot_groups can be used. Enabling this feature will open a window showing SWR detection across the user's selected time series. The graphs below demonstrate how detected events are displayed when plot_groups is enabled. Note that each MATLAB file will open its own window, and that windows will have to be closed manually. While optimizing parameters, it may be best to use a small selection of recordings.
 

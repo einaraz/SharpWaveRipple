@@ -127,7 +127,6 @@ def DetectIntervalsSWR(data, threshold, number_points, combine_groups, time_cons
             df_windows[-1]['final_time']        = stats_window['final_time']
             df_windows[-1]['duration_seconds']  = stats_window['final_time'] - df_windows[-1]['initial_time']
             new_v_plot = data_original.loc[df_windows[-1]['initial_time']:stats_window['final_time']]
-            print(new_v_plot)
         if plot_groups: ax.plot(new_v_plot.index, new_v_plot['signal_zscore'], marker='x', markersize=2)
     if plot_groups: plt.show()
     return pd.DataFrame(df_windows, index=(np.arange(len(df_windows))+1) )
